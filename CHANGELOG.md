@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-01-20 (v1 - İlk Bundle Release)
+
+| Dosya | Güncelleme |
+|-------|-----------|
+| `build.js` | Build script oluşturuldu: tüm CSS/JS'i versiyonlu bundle'a birleştirir (node build.js v1/v2/--new). |
+| `dist/v1/bundle.css` | 21 CSS dosyası tek bundle'da birleştirildi. |
+| `dist/v1/bundle.js` | 1 JS dosyası (header_extra_buttons.js) bundle'a alındı. |
+| `dist/loader.js` | CDN loader: CMS'e sadece bu eklenir, versiyon değişkeni ile v1/v2 arası geçiş yapılır. |
+| `dist/version.json` | Versiyon takip dosyası: aktif versiyon, mevcut versiyonlar, son build tarihi. |
+
+---
+
 ## 2026-01-20
 
 | Dosya | Güncelleme |

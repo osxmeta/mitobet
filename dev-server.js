@@ -27,7 +27,6 @@ const MITOBET_DIR = __dirname;
 const CSS_FILES = [
   // Pasife taşınanlar kaldırıldı: background.css, header_wallet.css,
   // section_view_buttons.css, sidebar.css, tepe_winner.css, signup-modal
-  'CSS/search_design.css',
   'CSS/header_buttons.css',
   'CSS/mobile_navbar.css',
   'CSS/section_buttons.css',
@@ -54,6 +53,7 @@ const CSS_FILES = [
 const JS_FILES_WITH_EXT = [
   // Pasife taşınanlar kaldırıldı: font_loader.js, theme_toggle.js, snow_effect.js,
   // promo_image_replacer.js, yatirim_uyari.js
+  'SCRIPT/css_blocker.js',
   'SCRIPT/header_extra_buttons.js',
 ];
 

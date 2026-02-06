@@ -23,28 +23,22 @@ header,
     background-color: #181818 !important;
 }
 
-/* Multisearch arka plan */
-.multisearch,
-#drop-container,
-.main__search {
-    background: #181818 !important;
-    background-color: #181818 !important;
-}
+/* Multisearch arka plan - kaldırıldı (search alanını bozuyordu) */
 
-/* Form input arka planları */
-.form__input,
-.form-control,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select {
+/* Form input arka planları (sadece modal/form içi) */
+.modal .form__input,
+.modal .form-control,
+.modal input[type="text"],
+.modal input[type="password"],
+.modal input[type="email"],
+.modal select {
     background: #1e1e1e !important;
     background-color: #1e1e1e !important;
     border-color: rgba(207, 174, 109, 0.2) !important;
 }
 
-.form__input:focus,
-.form-control:focus {
+.modal .form__input:focus,
+.modal .form-control:focus {
     background: #252525 !important;
     border-color: #CFAE6D !important;
 }
