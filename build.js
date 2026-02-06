@@ -177,9 +177,17 @@ function buildLoader(activeVersion) {
         '    document.head.appendChild(link);\n' +
         '\n' +
         '    // JS yukle\n' +
-        '    var script = document.createElement("script");\n' +
-        '    script.src = BASE + "/bundle.js";\n' +
-        '    document.body.appendChild(script);\n' +
+        '    function loadJS() {\n' +
+        '        var script = document.createElement("script");\n' +
+        '        script.src = BASE + "/bundle.js";\n' +
+        '        (document.body || document.head).appendChild(script);\n' +
+        '    }\n' +
+        '\n' +
+        '    if (document.body) {\n' +
+        '        loadJS();\n' +
+        '    } else {\n' +
+        '        document.addEventListener("DOMContentLoaded", loadJS);\n' +
+        '    }\n' +
         '})();\n';
 
     fs.writeFileSync(path.join(DIST, 'loader.js'), loaderContent);
