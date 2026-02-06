@@ -788,18 +788,37 @@ input, select, textarea,
         document.head.appendChild(style);
     }
 
-    // ===== ÜST BANNER (Güncel Giriş) =====
+    // ===== ÜST BANNER (Sonraki Domain) =====
+    function getNextDomain() {
+        var host = window.location.hostname; // örn: mitobet274.com
+        var match = host.match(/^(mitobet)(\d+)\.(.+)$/i);
+        if (match) {
+            var prefix = match[1];
+            var num = parseInt(match[2]);
+            var tld = match[3];
+            return prefix + (num + 1) + '.' + tld;
+        }
+        return null;
+    }
+
     function addTopBar() {
         if (document.querySelector('.mito-topbar')) return;
         var header = document.querySelector('#header') || document.querySelector('header');
         if (!header) return;
 
+        var nextDomain = getNextDomain();
         var topbar = document.createElement('div');
         topbar.className = 'mito-topbar';
         topbar.setAttribute('data-mito-extra', 'topbar');
-        topbar.innerHTML = '<span>Güncel Giriş:</span> <a href="https://mito.ws/giris" target="_blank">mito.ws</a>';
+
+        if (nextDomain) {
+            topbar.innerHTML = '<span>Sıradaki adresimiz:</span> <a href="https://' + nextDomain + '" target="_blank">' + nextDomain + '</a>';
+        } else {
+            topbar.innerHTML = '<span>Güncel Giriş:</span> <a href="https://mito.ws/giris" target="_blank">mito.ws</a>';
+        }
+
         header.parentNode.insertBefore(topbar, header);
-        console.log('[MITO] Üst banner (güncel giriş) eklendi');
+        console.log('[MITO] Üst banner eklendi');
     }
 
     // ===== DESKTOP BUTONLARI =====
