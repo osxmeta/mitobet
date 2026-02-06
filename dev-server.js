@@ -54,6 +54,8 @@ const JS_FILES_WITH_EXT = [
   // Pasife taşınanlar kaldırıldı: font_loader.js, theme_toggle.js, snow_effect.js,
   // promo_image_replacer.js, yatirim_uyari.js
   'SCRIPT/css_blocker.js',
+  'SCRIPT/font_loader.js',
+  'SCRIPT/promo_image_replacer.js',
   'SCRIPT/header_extra_buttons.js',
 ];
 

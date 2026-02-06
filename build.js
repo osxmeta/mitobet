@@ -45,6 +45,8 @@ const CSS_FILES = [
 
 const JS_FILES = [
     'SCRIPT/css_blocker.js',
+    'SCRIPT/font_loader.js',
+    'SCRIPT/promo_image_replacer.js',
     'SCRIPT/header_extra_buttons.js',
 ];
 
